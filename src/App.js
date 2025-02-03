@@ -7,19 +7,19 @@ import Registration from "./components/Registration";
 import { Box } from "@mui/material";
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track user login state
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
   const styles = {
     content: {
-      marginLeft: isLoggedIn ? "260px" : "0", // Sidebar width or full screen
+      marginLeft: isLoggedIn ? "260px" : "0", 
       padding: "20px",
-      backgroundColor: "#F4F6F8", // Light gray background for content
+      backgroundColor: "#F4F6F8", 
       minHeight: "100vh",
-      transition: "margin-left 0.3s ease", // Smooth transition when toggling sidebar
+      transition: "margin-left 0.3s ease",
     },
     fullScreen: {
       padding: "0",
-      backgroundColor: "#ffffff", // White background for full-screen pages
+      backgroundColor: "#ffffff", 
       minHeight: "100vh",
     },
   };
@@ -28,7 +28,7 @@ const App = () => {
     <Router>
       { <Sidebar />} {/* Show sidebar only when logged in */}
       <Box
-        sx={isLoggedIn ? styles.content : styles.fullScreen} // Dynamic styles based on login state
+        sx={isLoggedIn ? styles.content : styles.fullScreen} 
       >
         <Routes>
           {/* Public Routes */}

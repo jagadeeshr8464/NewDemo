@@ -173,6 +173,13 @@ const Sidebar = () => {
             </ListItem>
           </List>
         </Collapse>
+        <ListItem button component={Link} to="/RightSidePage" sx={{ color: "white" }}>
+          <ListItemIcon>
+            <DashboardIcon sx={{ color: "#fff" }} />
+          </ListItemIcon>
+          <ListItemText primary="Jagadeesh" />
+        </ListItem>
+
       </List>
     </Box>
     </Box>
