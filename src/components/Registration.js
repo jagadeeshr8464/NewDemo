@@ -265,11 +265,11 @@ const Registration = () => {
   }}>
                   <div style={styles.inputWrapper}>
                     <FaUser style={styles.inputIcon} />
-                    <input type="text" placeholder="User Name" required style={styles.formInput} />
+                    <input type="text" placeholder="User Name"  style={styles.formInput} />
                   </div>
                   <div style={styles.inputWrapper}>
                     <FaLock style={styles.inputIcon} />
-                    <input type="password" placeholder="Password" required style={styles.formInput} />
+                    <input type="password" placeholder="Password"  style={styles.formInput} />
                   </div>
                   <p style={styles.formText}>Forgot Password?</p>
                   <button type="submit" style={styles.formButton}>

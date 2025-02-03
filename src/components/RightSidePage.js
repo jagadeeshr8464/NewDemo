@@ -120,18 +120,18 @@ const RightSidePage = () => {
       color: "#555",
     },
     quote: {
-        fontSize: '16px',
-        color: '#333',
-     
-        marginBottom: '10px',
-      },
+      fontSize: '16px',
+      color: '#333',
+
+      marginBottom: '10px',
+    },
   };
 
   return (
     <Box sx={styles.mainContainer}>
       {/* Header */}
-     {/* Header */}
-     <Box sx={styles.header}>
+      {/* Header */}
+      <Box sx={styles.header}>
         <Box >
           {/* <Button color="primary">Home</Button>
           <Button color="primary">Login</Button>
@@ -139,7 +139,7 @@ const RightSidePage = () => {
           <Button color="primary">About Us</Button> */}
         </Box>
         <Box sx={styles.userSection}>
-        <Button color="primary">Home</Button>
+          <Button color="primary">Home</Button>
           <Button color="primary">Login</Button>
           <Button color="primary">Contact</Button>
           <Button color="primary">About Us</Button>
@@ -158,201 +158,195 @@ const RightSidePage = () => {
       </Box>
 
       <Box
-  sx={{
-    backgroundColor: "#E6E6FA", // Light purple background
-    padding: "20px",
-    borderRadius: "10px",
-    border: "2px solid #0044cc", // Border as per design
-    marginBottom: "30px",
-  }}
->
-  <Typography
-    variant="h6"
-    sx={{
-      fontWeight: "bold",
-      color: "#0044cc",
-      marginBottom: "20px",
-      textAlign: "left",
-    }}
-  >
-    Find Your Right Match Here
-  </Typography>
-  <Box
-    sx={{
-      display: "flex",
-      gap: "15px", // Reduced spacing between inputs
-      alignItems: "center",
-      flexWrap: "wrap", // Wrap for responsiveness
-    }}
-  >
-    {/* Looking For */}
-    <Box sx={{ flex: "1", maxWidth: "20%" }}>
-      <InputLabel
-        shrink
         sx={{
-          color: "#888",
-          fontSize: "0.9rem",
-          marginBottom: "5px",
-        }}
-      >
-        I'm looking for you
-      </InputLabel>
-      <FormControl fullWidth variant="outlined" sx={{ backgroundColor: "#fff", borderRadius: "10px" }}>
-        <Select
-          defaultValue="Woman"
-          sx={{
-            height: "30px", // Slim height
-            fontSize: "0.8rem", // Slim font size
-          }}
-        >
-          <MenuItem value="Man">Man</MenuItem>
-          <MenuItem value="Woman">Woman</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
-
-    {/* Aged */}
-    <Box sx={{ display: "flex", alignItems: "center", maxWidth: "35%" }}>
-      <Box sx={{ flex: "1" }}>
-        <InputLabel
-          shrink
-          sx={{
-            color: "#888",
-            fontSize: "0.9rem",
-            marginBottom: "5px",
-          }}
-        >
-          Aged
-        </InputLabel>
-        <FormControl fullWidth variant="outlined" sx={{ backgroundColor: "#fff", borderRadius: "10px" }}>
-          <Select
-            defaultValue={23}
-            sx={{
-              height: "30px",
-              fontSize: "0.8rem",
-            }}
-          >
-            {[...Array(41)].map((_, i) => (
-              <MenuItem key={i} value={18 + i}>
-                {18 + i}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </Box>
-      <Typography
-        sx={{
-          margin: "0 10px",
-          color: "#888",
-          fontSize: "0.9rem",
-          marginTop: "22px",
-        }}
-      >
-        to
-      </Typography>
-      <Box sx={{ flex: "1" }}>
-        <FormControl fullWidth variant="outlined" sx={{ backgroundColor: "#fff", borderRadius: "10px", marginTop: '25px' }}>
-          <Select
-            defaultValue={28}
-            sx={{
-              height: "30px",
-              fontSize: "0.8rem",
-            }}
-          >
-            {[...Array(41)].map((_, i) => (
-              <MenuItem key={i} value={18 + i}>
-                {18 + i}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </Box>
-    </Box>
-
-    {/* Religion */}
-    <Box sx={{ flex: "1", maxWidth: "20%" }}>
-      <InputLabel
-        shrink
-        sx={{
-          color: "#888",
-          fontSize: "0.9rem",
-          marginBottom: "5px",
-        }}
-      >
-        Of Religion
-      </InputLabel>
-      <FormControl fullWidth variant="outlined" sx={{ backgroundColor: "#fff", borderRadius: "10px" }}>
-        <Select
-          defaultValue="Hindu"
-          sx={{
-            height: "30px",
-            fontSize: "0.8rem",
-          }}
-        >
-          <MenuItem value="Hindu">Hindu</MenuItem>
-          <MenuItem value="Muslim">Muslim</MenuItem>
-          <MenuItem value="Christian">Christian</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
-
-    {/* Mother Tongue */}
-    <Box sx={{ flex: "1", maxWidth: "20%" }}>
-      <InputLabel
-        shrink
-        sx={{
-          color: "#888",
-          fontSize: "0.9rem",
-          marginBottom: "5px",
-        }}
-      >
-        And Mother Tongue
-      </InputLabel>
-      <FormControl fullWidth variant="outlined" sx={{ backgroundColor: "#fff", borderRadius: "10px" }}>
-        <Select
-          defaultValue="English"
-          sx={{
-            height: "30px",
-            fontSize: "0.8rem",
-          }}
-        >
-          <MenuItem value="English">English</MenuItem>
-          <MenuItem value="Hindi">Hindi</MenuItem>
-          <MenuItem value="Tamil">Tamil</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
-
-    {/* Search Button */}
-    <Box>
-      <Button
-        variant="contained"
-        sx={{
-          height: "36px",
-          minWidth: "140px",
-          backgroundColor: "#0044cc",
-          color: "#fff",
-          fontWeight: "bold",
-          fontSize: "0.8rem",
-          ":hover": {
-            backgroundColor: "#003399",
-          },
+          backgroundColor: "#E6E6FA",
+          padding: "20px",
           borderRadius: "10px",
-          top:'10px',
-          left: '20px'
+          border: "2px solid #0044cc",
+          marginBottom: "30px",
         }}
       >
-        Search
-      </Button>
-    </Box>
-  </Box>
-</Box>
+        <Typography
+          variant="h6"
+          sx={{
+            fontWeight: "bold",
+            color: "#0044cc",
+            marginBottom: "20px",
+            textAlign: "left",
+          }}
+        >
+          Find Your Right Match Here
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            gap: "15px",
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {/* Looking For */}
+          <Box sx={{ flex: "1", maxWidth: "20%" }}>
+            <InputLabel
+              shrink
+              sx={{
+                color: "#888",
+                fontSize: "0.9rem",
+                marginBottom: "5px",
+              }}
+            >
+              I'm looking for you
+            </InputLabel>
+            <FormControl fullWidth variant="outlined" sx={{ backgroundColor: "#fff", borderRadius: "10px" }}>
+              <Select
+                defaultValue="Woman"
+                sx={{
+                  height: "30px",
+                  fontSize: "0.8rem",
+                }}
+              >
+                <MenuItem value="Man">Man</MenuItem>
+                <MenuItem value="Woman">Woman</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
 
+          {/* Aged */}
+          <Box sx={{ display: "flex", alignItems: "center", maxWidth: "35%" }}>
+            <Box sx={{ flex: "1" }}>
+              <InputLabel
+                shrink
+                sx={{
+                  color: "#888",
+                  fontSize: "0.9rem",
+                  marginBottom: "5px",
+                }}
+              >
+                Aged
+              </InputLabel>
+              <FormControl fullWidth variant="outlined" sx={{ backgroundColor: "#fff", borderRadius: "10px" }}>
+                <Select
+                  defaultValue={23}
+                  sx={{
+                    height: "30px",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  {[...Array(41)].map((_, i) => (
+                    <MenuItem key={i} value={18 + i}>
+                      {18 + i}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </Box>
+            <Typography
+              sx={{
+                margin: "0 10px",
+                color: "#888",
+                fontSize: "0.9rem",
+                marginTop: "22px",
+              }}
+            >
+              to
+            </Typography>
+            <Box sx={{ flex: "1" }}>
+              <FormControl fullWidth variant="outlined" sx={{ backgroundColor: "#fff", borderRadius: "10px", marginTop: '25px' }}>
+                <Select
+                  defaultValue={28}
+                  sx={{
+                    height: "30px",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  {[...Array(41)].map((_, i) => (
+                    <MenuItem key={i} value={18 + i}>
+                      {18 + i}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </Box>
+          </Box>
 
+          {/* Religion */}
+          <Box sx={{ flex: "1", maxWidth: "20%" }}>
+            <InputLabel
+              shrink
+              sx={{
+                color: "#888",
+                fontSize: "0.9rem",
+                marginBottom: "5px",
+              }}
+            >
+              Of Religion
+            </InputLabel>
+            <FormControl fullWidth variant="outlined" sx={{ backgroundColor: "#fff", borderRadius: "10px" }}>
+              <Select
+                defaultValue="Hindu"
+                sx={{
+                  height: "30px",
+                  fontSize: "0.8rem",
+                }}
+              >
+                <MenuItem value="Hindu">Hindu</MenuItem>
+                <MenuItem value="Muslim">Muslim</MenuItem>
+                <MenuItem value="Christian">Christian</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
 
+          {/* Mother Tongue */}
+          <Box sx={{ flex: "1", maxWidth: "20%" }}>
+            <InputLabel
+              shrink
+              sx={{
+                color: "#888",
+                fontSize: "0.9rem",
+                marginBottom: "5px",
+              }}
+            >
+              And Mother Tongue
+            </InputLabel>
+            <FormControl fullWidth variant="outlined" sx={{ backgroundColor: "#fff", borderRadius: "10px" }}>
+              <Select
+                defaultValue="English"
+                sx={{
+                  height: "30px",
+                  fontSize: "0.8rem",
+                }}
+              >
+                <MenuItem value="English">English</MenuItem>
+                <MenuItem value="Hindi">Hindi</MenuItem>
+                <MenuItem value="Tamil">Tamil</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
 
-
-
+          {/* Search Button */}
+          <Box>
+            <Button
+              variant="contained"
+              sx={{
+                height: "36px",
+                minWidth: "140px",
+                backgroundColor: "#0044cc",
+                color: "#fff",
+                fontWeight: "bold",
+                fontSize: "0.8rem",
+                ":hover": {
+                  backgroundColor: "#003399",
+                },
+                borderRadius: "10px",
+                top: '10px',
+                left: '20px'
+              }}
+            >
+              Search
+            </Button>
+          </Box>
+        </Box>
+      </Box>
 
       {/* Features */}
 
@@ -387,12 +381,12 @@ const RightSidePage = () => {
       <div style={styles.trustedSection}>
         <h1 style={styles.trustedTitle}>Trusted by Millions</h1>
         <p style={styles.quote}>
-            "Love doesn’t make the world go around. Love is what makes the ride
-            worthwhile."
-            Millions of Active Matrimonial users around the world find their
-            true love and partners from this site. We are always there to help
-            and find you the suitable match for yourself.
-          </p>
+          "Love doesn’t make the world go around. Love is what makes the ride
+          worthwhile."
+          Millions of Active Matrimonial users around the world find their
+          true love and partners from this site. We are always there to help
+          and find you the suitable match for yourself.
+        </p>
         <div style={styles.divider}></div>
         <div style={styles.iconsContainer}>
           <div style={styles.iconCard}>
