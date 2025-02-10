@@ -9,16 +9,19 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import { IoLogoInstagram } from "react-icons/io";
 import { BsYoutube } from "react-icons/bs";
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const GoodPlans = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const styles = {
     container: {
-      width: "100%",
-      padding: "50px 20px",
+      // width: "100%",
+      // padding: "50px 20px",
       textAlign: "center",
       boxSizing: "border-box",
+      // marginLeft: "60px", // Consistent padding for all screen sizes
+      marginLeft: "260px",
     },
     divider: {
       height: "2px",
@@ -37,6 +40,7 @@ const GoodPlans = () => {
       justifyContent: "center",
       flexWrap: "wrap",
       marginBottom: "40px",
+      // marginLeft: '30px'
     },
     imageCard: {
       position: "relative",
@@ -52,28 +56,29 @@ const GoodPlans = () => {
       objectFit: "cover",
     },
 
-    
     overlay: {
       position: "absolute",
       top: "45%",
       left: "50%",
       transform: "translate(-50%, -50%)",
+      // backgroundColor: "rgba(255, 255, 255, 0.95)",
       padding: "20px",
       borderRadiu3: "10px",
       textAlign: "center",
       width: "40%",
+      // boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
     },
     overlayTitle: {
       fontSize: "1.2rem",
       fontWeight: "bold",
       color: "#7a468c",
-      marginBottom: "45px",
+      marginBottom: "45px", // Spacing below the title
     },
     overlayDetails: {
       fontSize: "0.7rem",
       fontWeight: 'bold',
       color: "#555",
-      marginBottom: "20px", 
+      marginBottom: "20px", // Spacing below the details
       lineHeight: "1.5",
 
     },
@@ -81,7 +86,7 @@ const GoodPlans = () => {
       fontSize: "1.25rem",
       fontWeight: "bold",
       color: "#22693a",
-      marginBottom: "30px", 
+      marginBottom: "30px", // Fixed space below the price
     },
     buttonContainer: {
       display: "flex",
@@ -101,50 +106,50 @@ const GoodPlans = () => {
       marginRight: '90px'
     },
 
-
     ///////Trusted-Section//////
     trustedSection: {
-        textAlign: "center",
-        padding: "20px 0",
-      },
-      trustedTitle: {
-        fontSize: "2rem",
-        fontWeight: "bold",
-        color: "#7a468c",
-        marginBottom: "10px",
-      },
-      divider1: {
-        height: "2px",
-        width: "60%",
-        backgroundColor: "#FFEB3B",
-        margin: "10px auto",
-      },
-      iconsContainer: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "40px", 
-        marginTop: "20px",
-      },
-      iconCard: {
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        textAlign: "center",
-        gap: '30px'
-      },
-      iconImage: {
-        width: "50px",
-        height: "50px",
-        marginBottom: "10px",
-  
-      },
-      iconText: {
-        fontSize: "1rem",
-        fontWeight: "bold",
-        color: "#555",
-      },
+      textAlign: "center",
+      padding: "20px 0",
+    },
+    trustedTitle: {
+      fontSize: "2rem",
+      fontWeight: "bold",
+      color: "#7a468c",
+      marginBottom: "10px",
+    },
+    divider1: {
+      height: "2px",
+      width: "60%",
+      backgroundColor: "#FFEB3B",
+      margin: "10px auto",
+    },
+    iconsContainer: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "40px", // Space between each icon card
+      marginTop: "20px",
+    },
+    iconCard: {
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      textAlign: "center",
+      gap: '30px'
+    },
+    iconImage: {
+      width: "50px",
+      height: "50px",
+      marginBottom: "10px",
 
+    },
+    iconText: {
+      fontSize: "1rem",
+      fontWeight: "bold",
+      color: "#555",
+    },
+
+    ///////Footer-section//////
     footer: {
       backgroundColor: "#07544b",
       color: "#fff",
@@ -169,10 +174,10 @@ const GoodPlans = () => {
       fontWeight: "bold",
       marginBottom: "20px",
       color: '#FFFFFF'
-      
+      // fontFamily: 'jost',
 
     },
-   
+
     button1: {
       padding: "10px 20px",
       fontSize: "0.8rem",
@@ -181,6 +186,7 @@ const GoodPlans = () => {
       border: "none",
       borderRadius: "20px",
       cursor: "pointer",
+      // marginRight: '30px',
       width: '12%',
       alignSelf: 'center'
     },
@@ -191,29 +197,28 @@ const GoodPlans = () => {
       margin: "0 auto",
     },
     footerBottomContainer: {
-      width: "90%",
-      
-      justifyContent: "space-between",
+      display: "flex", // Align items in a row
+      justifyContent: "space-between", // Distribute space between child elements
+      alignItems: "center", // Align items vertically in the same row
+      width: "90%", // Set the width of the container
+      margin: "0 auto", // Center the container horizontally
     },
     footerLinkContainer: {
       display: "flex",
-      gap: "40px", 
-      justifyContent: 'center',
-      
-
+      gap: "60px", // Space between links
+      margin: "0 auto", // Center the links
+      padding: '20px'
     },
     footerLink: {
       color: "#fff",
       fontSize: "1rem",
       textDecoration: "none",
-      justifyContent: 'center',
-      paddingTop: '20px'
     },
     socialIcons: {
       display: "flex",
-      justifyContent: "flex-end", 
-      gap: "20px",
-      flexGrow: 1,
+      gap: "30px", // Space between icons
+      justifyCont3nt: "flex-end", // Align icons at the end
+      marginRight: '10%'
     },
     socialIcon: {
       color: "#fff",
@@ -225,7 +230,7 @@ const GoodPlans = () => {
   return (
     <div style={styles.container}>
       {/* Divider */}
-      <div style={styles.divider}></div>
+      {/* <div style={styles.divider}></div> */}
       <h1 style={styles.title}>With Good Plans</h1>
       <div style={styles.plansContainer}>
         {/* Image Card with Overlay */}
@@ -286,6 +291,7 @@ const GoodPlans = () => {
         <div style={styles.divider1}></div>
       </div>
 
+
       {/* Footer Section */}
       <div style={styles.footer}>
         <img src={logo} alt="HiAce Logo" style={styles.footerLogo} />
@@ -293,33 +299,32 @@ const GoodPlans = () => {
 
         <p style={styles.footerText}>Request More Information</p>
         <button style={styles.button1} onClick={() => navigate('/contact-us')}>Contact Us</button>
+        <p style={{ marginTop: "20px" }}>© 2024 HiAce Systems</p>
+        <div style={styles.footerDivider}></div>
 
-       
-        <p style={{ marginTop: "20px", fontSize:"10px" }}>© 2024 HiAce Systems</p>
-      <div style={styles.footerDivider}></div>
+        <div style={styles.footerBottomContainer}>
+  {/* Footer Links */}
+  <div style={styles.footerLinkContainer}>
+    <a href="/" style={styles.footerLink}>
+      Team
+    </a>
+    <a href="/" style={styles.footerLink}>
+      Case Studies
+    </a>
+    <a href="/" style={styles.footerLink}>
+      Publications
+    </a>
+  </div>
 
-      <div style={styles.footerBottomContainer}>
-        {/* Footer Links */}
-        <div style={styles.footerLinkContainer}>
-          <a href="/" style={styles.footerLink}>
-            Team
-          </a>
-          <a href="/" style={styles.footerLink}>
-            Case Studies
-          </a>
-          <a href="/" style={styles.footerLink}>
-            Publications
-          </a>
-        </div>
+  {/* Social Icons */}
+  <div style={styles.socialIcons}>
+    <TiSocialLinkedinCircular style={styles.socialIcon} />
+    <RiFacebookCircleFill style={styles.socialIcon} />
+    <IoLogoInstagram style={styles.socialIcon} />
+    <BsYoutube style={styles.socialIcon} />
+  </div>
+</div>
 
-        {/* Social Icons */}
-        <div style={styles.socialIcons}>
-          <TiSocialLinkedinCircular style={styles.socialIcon} />
-          <RiFacebookCircleFill style={styles.socialIcon} />
-          <IoLogoInstagram style={styles.socialIcon} />
-          <BsYoutube style={styles.socialIcon} />
-        </div>
-      </div>
       </div>
     </div>
   );

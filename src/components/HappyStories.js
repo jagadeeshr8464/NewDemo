@@ -11,6 +11,7 @@ const HappyStories = () => {
       padding: "50px 20px",
       textAlign: "center",
       boxSizing: "border-box",
+      marginLeft: "12%",
     },
     title: {
       fontSize: "2.5rem",
@@ -54,7 +55,60 @@ const HappyStories = () => {
       color: "#777",
       lineHeight: "1.5",
     },
+  
+    // Responsive styles using media queries
+    "@media (max-width: 1024px)": {
+      container: {
+        padding: "40px 15px",
+        marginLeft: "5%",
+      },
+      title: {
+        fontSize: "2rem",
+      },
+      subtitle: {
+        fontSize: "1.1rem",
+      },
+      cardContainer: {
+        flexDirection: "column",
+        alignItems: "center",
+      },
+      card: {
+        maxWidth: "90%",
+      },
+    },
+  
+    "@media (max-width: 768px)": {
+      container: {
+        padding: "30px 10px",
+        marginLeft: "0",
+      },
+      title: {
+        fontSize: "1.8rem",
+      },
+      subtitle: {
+        fontSize: "1rem",
+      },
+      card: {
+        maxWidth: "100%",
+      },
+    },
+  
+    "@media (max-width: 480px)": {
+      container: {
+        padding: "20px 5px",
+      },
+      title: {
+        fontSize: "1.5rem",
+      },
+      subtitle: {
+        fontSize: "0.9rem",
+      },
+      card: {
+        padding: "15px",
+      },
+    },
   };
+  
 
   return (
     <div style={styles.container}>

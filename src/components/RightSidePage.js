@@ -19,6 +19,8 @@ import BestMatch from "../components/assets/BestMatch.png";
 import VerifyProfile from "../components/assets/VerifyProfile.png";
 import Privacy from "../components/assets/Privacy.png";
 import profilePic from "../components/assets/profilePic.png";
+import { Link } from "react-router-dom";
+
 
 const RightSidePage = () => {
   const styles = {
@@ -28,7 +30,7 @@ const RightSidePage = () => {
       minHeight: "100vh",
       marginLeft: "260px",
       // marginTop: '100px'
-      position: "fixed",
+      //position: "fixed",
       marginVertical: '100px'
     },
     header: {
@@ -36,6 +38,7 @@ const RightSidePage = () => {
       justifyContent: "space-between",
       alignItems: "center",
       mb: 2,
+
     },
     userSection: {
       display: "flex",
@@ -125,6 +128,11 @@ const RightSidePage = () => {
 
       marginBottom: '10px',
     },
+    Content:{
+      color:'#FDCF6F',
+      textAlign: "center",
+
+    },
   };
 
   return (
@@ -139,9 +147,9 @@ const RightSidePage = () => {
           <Button color="primary">About Us</Button> */}
         </Box>
         <Box sx={styles.userSection}>
-          <Button color="primary">Home</Button>
+          <Button color="primary" component={Link} to="/HomePage">Home</Button>
           <Button color="primary">Login</Button>
-          <Button color="primary">Contact</Button>
+          <Button color="primary" component={Link} to="/ContactUs">Contact</Button>
           <Button color="primary">About Us</Button>
           <Badge color="secondary" badgeContent={4}>
             <NotificationsIcon sx={{ fontSize: "28px", color: "#0044cc" }} />
@@ -156,6 +164,7 @@ const RightSidePage = () => {
           </Typography>
         </Box>
       </Box>
+      <h4 style={styles.Content}>World's No.1 Matchmaking Service</h4>
 
       <Box
         sx={{
@@ -317,6 +326,7 @@ const RightSidePage = () => {
                 }}
               >
                 <MenuItem value="English">English</MenuItem>
+                <MenuItem value="Telugu">Telugu</MenuItem>
                 <MenuItem value="Hindi">Hindi</MenuItem>
                 <MenuItem value="Tamil">Tamil</MenuItem>
               </Select>
@@ -350,13 +360,13 @@ const RightSidePage = () => {
 
       {/* Features */}
 
-      <Grid container spacing={6} sx={{ justifyContent: "center", paddingTop: '70px' }}>
+      <Grid container spacing={9} sx={{ justifyContent: "center", paddingTop: '70px' }}>
         <Grid item xs={12} sm={6} md={3}>
           <Card>
             <CardActionArea sx={styles.featureCard}>
               <AddCircleOutline sx={styles.featureIcon} />
               <CardContent>
-                <Typography variant="h6" sx={{ color: "#0044cc", fontWeight: "600", fontSize: 15 }}>
+                <Typography variant="h7" sx={{ color: "#0044cc", fontWeight: "600", fontSize: 11 }}>
                   Create Your Biodata
                 </Typography>
               </CardContent>
@@ -368,7 +378,7 @@ const RightSidePage = () => {
             <CardActionArea sx={styles.featureCard}>
               <YouTube sx={styles.featureIcon} />
               <CardContent>
-                <Typography variant="h6" sx={{ color: "#0044cc", fontWeight: "600", fontSize: 15 }}>
+                <Typography variant="h7" sx={{ color: "#0044cc", fontWeight: "600", fontSize: 11 }}>
                   How to Create Biodata
                 </Typography>
               </CardContent>

@@ -30,18 +30,16 @@ import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
 import WalletIcon from '@mui/icons-material/Wallet';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import GroupsIcon from '@mui/icons-material/Groups';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 const Sidebar = () => {
-  const [openMenus, setOpenMenus] = useState({
-    members: false,
-    profileAttributes: false,
-  });
+  const [openMenus, setOpenMenus] = useState({});
 
   const toggleMenu = (menu) => {
-    setOpenMenus((prev) => ({
-      ...prev,
-      [menu]: !prev[menu],
-    }));
+    setOpenMenus((prev) => {
+      const updatedMenus = { [menu]: !prev[menu] };
+      return updatedMenus;
+    });
   };
 
   const styles = {
@@ -62,8 +60,10 @@ const Sidebar = () => {
 
   return (
     <Box>
-      <Box sx={{ width: 260, backgroundColor: "#002B5B", color: "#fff", height: "100vh", position: "fixed", overflowY: "auto",}}>
-        {/* Logo */}
+      <Box sx={{ width: 260, backgroundColor: "#002B5B", color: "#fff", height: "100vh", position: "fixed", overflowY: "auto", }}>
+        <Box sx={{ marginLeft: '70px', my: 1, backgroundColor: "#002B5B" }}>
+          <img src={logo} alt="Logo" style={{ width: "120px", backgroundColor: "#002B5B" }} />
+        </Box>
         {/* Profile Section */}
         <Box sx={{ textAlign: "center", mb: 2 }}>
           <Avatar
@@ -129,27 +129,49 @@ const Sidebar = () => {
           <Collapse in={openMenus.members} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button component={Link} to="/free-members" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Free Members" />
               </ListItem>
               <ListItem button component={Link} to="/premium-members" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Premium Members" />
               </ListItem>
               <ListItem button component={Link} to="/premium-members" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Bulk Members Add" />
               </ListItem>
               <ListItem button component={Link} to="/premium-members" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Deleted Members" />
               </ListItem>
               <ListItem button component={Link} to="/premium-members" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Reported Members" />
               </ListItem>
               <ListItem button component={Link} to="/premium-members" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Unapproved Profile Pictures" />
               </ListItem>
             </List>
           </Collapse>
 
-          <ListItem button onClick={() => toggleMenu("profileAttributes")} sx={{ color: "white" }}>
+          <ListItem
+            button
+            onClick={() => toggleMenu("profileAttributes")}
+            sx={{ color: "white" }}
+          >
             <ListItemIcon>
               <SettingsIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
@@ -159,45 +181,81 @@ const Sidebar = () => {
           <Collapse in={openMenus.profileAttributes} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button component={Link} to="/religions" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Religions" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Castes" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Sub Castes" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Member Languages" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Countries" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="State" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="City" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="On Behalf" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Family Values" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Family Status" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Marital Statuses" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Profile Sections" />
               </ListItem>
             </List>
           </Collapse>
 
-          <ListItem button component={Link} to="/RightSidePage" sx={{ color: "white" }}>
+          <ListItem button component={Link} to="/GoodPlans" sx={{ color: "white" }}>
             <ListItemIcon>
               <DashboardCustomizeIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
@@ -211,19 +269,25 @@ const Sidebar = () => {
             <ListItemText primary="Packages Payments" />
           </ListItem>
 
-          <ListItem button onClick={() => toggleMenu("profileAttributes")} sx={{ color: "white" }}>
+          <ListItem button onClick={() => toggleMenu("wallet")} sx={{ color: "white" }}>
             <ListItemIcon>
               <WalletIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
             <ListItemText primary="Wallet" />
-            {openMenus.profileAttributes ? <ExpandLess /> : <ExpandMore />}
+            {openMenus.wallet ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
-          <Collapse in={openMenus.profileAttributes} timeout="auto" unmountOnExit>
+          <Collapse in={openMenus.wallet} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button component={Link} to="/religions" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Wallet Transaction History" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Manual Wallet Recharge Requests" />
               </ListItem>
             </List>
@@ -236,40 +300,49 @@ const Sidebar = () => {
             <ListItemText primary="Happy Stories" />
           </ListItem>
 
-          <ListItem button onClick={() => toggleMenu("profileAttributes")} sx={{ color: "white" }}>
+          <ListItem button onClick={() => toggleMenu("blogSystem")} sx={{ color: "white" }}>
             <ListItemIcon>
               <ShowChartIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
             <ListItemText primary="Blog System" />
-            {openMenus.profileAttributes ? <ExpandLess /> : <ExpandMore />}
+            {openMenus.blogSystem ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
-          <Collapse in={openMenus.profileAttributes} timeout="auto" unmountOnExit>
+          <Collapse in={openMenus.blogSystem} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button component={Link} to="/religions" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="All Posts" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Categories" />
               </ListItem>
             </List>
           </Collapse>
 
-          <ListItem button onClick={() => toggleMenu("profileAttributes")} sx={{ color: "white" }}>
+          <ListItem button onClick={() => toggleMenu("marketing")} sx={{ color: "white" }}>
             <ListItemIcon>
               <ShowChartIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
             <ListItemText primary="Marketing" />
-            {openMenus.profileAttributes ? <ExpandLess /> : <ExpandMore />}
+            {openMenus.marketing ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
-          <Collapse in={openMenus.profileAttributes} timeout="auto" unmountOnExit>
+          <Collapse in={openMenus.marketing} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button component={Link} to="/religions" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="News Letter" />
               </ListItem>
             </List>
           </Collapse>
 
-          <ListItem button component={Link} to="/HappyStories" sx={{ color: "white" }}>
+          <ListItem button component={Link} to="/ContactUs" sx={{ color: "white" }}>
             <ListItemIcon>
               <NotificationsIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
@@ -283,108 +356,156 @@ const Sidebar = () => {
             <ListItemText primary="All Uploaded files" />
           </ListItem>
 
-          <ListItem button onClick={() => toggleMenu("profileAttributes")} sx={{ color: "white" }}>
+          <ListItem button onClick={() => toggleMenu("websiteSetups")} sx={{ color: "white" }}>
             <ListItemIcon>
               <SettingsIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
             <ListItemText primary="Website Setups" />
-            {openMenus.profileAttributes ? <ExpandLess /> : <ExpandMore />}
+            {openMenus.websiteSetups ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
-          <Collapse in={openMenus.profileAttributes} timeout="auto" unmountOnExit>
+          <Collapse in={openMenus.websiteSetups} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button component={Link} to="/religions" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Header" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Footer" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="pages" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Appearance" />
               </ListItem>
             </List>
           </Collapse>
 
-          <ListItem button onClick={() => toggleMenu("profileAttributes")} sx={{ color: "white" }}>
+          <ListItem button onClick={() => toggleMenu("settings")} sx={{ color: "white" }}>
             <ListItemIcon>
               <SettingsIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
             <ListItemText primary="Settings" />
-            {openMenus.profileAttributes ? <ExpandLess /> : <ExpandMore />}
+            {openMenus.settings ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
-          <Collapse in={openMenus.profileAttributes} timeout="auto" unmountOnExit>
+          <Collapse in={openMenus.settings} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button component={Link} to="/religions" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="General Settings" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Language" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Currency" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Payment Methods" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="SMTP Settings" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Third Party Settings" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Social Media Login" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Firebase Push Notification" />
               </ListItem>
             </List>
           </Collapse>
 
-          <ListItem button onClick={() => toggleMenu("profileAttributes")} sx={{ color: "white" }}>
+          <ListItem button onClick={() => toggleMenu("staffs")} sx={{ color: "white" }}>
             <ListItemIcon>
               <GroupsIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
             <ListItemText primary="Staffs" />
-            {openMenus.profileAttributes ? <ExpandLess /> : <ExpandMore />}
+            {openMenus.staffs ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
-          <Collapse in={openMenus.profileAttributes} timeout="auto" unmountOnExit>
+          <Collapse in={openMenus.staffs} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button component={Link} to="/religions" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="All Staffs" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Staffs Roles" />
               </ListItem>
             </List>
-          </Collapse>     
+          </Collapse>
 
-          <ListItem button onClick={() => toggleMenu("profileAttributes")} sx={{ color: "white" }}>
+          <ListItem button onClick={() => toggleMenu("systems")} sx={{ color: "white" }}>
             <ListItemIcon>
               <SettingsIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
             <ListItemText primary="Systems" />
-            {openMenus.profileAttributes ? <ExpandLess /> : <ExpandMore />}
+            {openMenus.systems ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
-          <Collapse in={openMenus.profileAttributes} timeout="auto" unmountOnExit>
+          <Collapse in={openMenus.systems} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button component={Link} to="/religions" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Updates" />
               </ListItem>
               <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+                <ListItemIcon>
+                  <FiberManualRecordIcon sx={{ color: "#fff" }} />
+                </ListItemIcon>
                 <ListItemText primary="Server Status" />
               </ListItem>
             </List>
-          </Collapse>   
+          </Collapse>
 
           <ListItem button component={Link} to="/HappyStories" sx={{ color: "white" }}>
             <ListItemIcon>
               <DashboardIcon sx={{ color: "#fff" }} />
             </ListItemIcon>
             <ListItemText primary="Addon Manager" />
-          </ListItem>  
+          </ListItem>
 
         </List>
       </Box>

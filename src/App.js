@@ -5,6 +5,9 @@ import HomePage from "./components/HomePage";
 import RightSidePage from "./components/RightSidePage";
 import Registration from "./components/Registration";
 import { Box } from "@mui/material";
+import HappyStories from "./components/HappyStories";
+import GoodPlans from "./components/GoodPlans";
+import ContactUs from "./components/ContactUs";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
@@ -41,12 +44,16 @@ const App = () => {
             path="/login"
             element={<Registration setIsLoggedIn={setIsLoggedIn} />}
           />
+          
 
           {/* Private Routes */}
           { (
             <>
               <Route path="/RightSidePage" element={<RightSidePage />} />
-              {/* Add additional private routes here */}
+              <Route path="/HappyStories" element={<HappyStories />} />
+              <Route path="/GoodPlans" element={<GoodPlans />} />
+              <Route path="/ContactUs" element={<ContactUs  />} />
+              <Route path="/HomePage" element={<HomePage />} />
             </>
           )}
         </Routes>
