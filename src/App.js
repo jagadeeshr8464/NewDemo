@@ -8,6 +8,7 @@ import { Box } from "@mui/material";
 import HappyStories from "./components/HappyStories";
 import GoodPlans from "./components/GoodPlans";
 import ContactUs from "./components/ContactUs";
+import AddMembers from "./components/AddMembers";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
@@ -35,7 +36,7 @@ const App = () => {
       >
         <Routes>
           {/* Public Routes */}
-          <Route path="/" element={<HomePage />} />
+           <Route path="/" element={<HomePage />} /> 
           <Route
             path="/registration"
             element={<Registration setIsLoggedIn={setIsLoggedIn} />}
@@ -54,6 +55,7 @@ const App = () => {
               <Route path="/GoodPlans" element={<GoodPlans />} />
               <Route path="/ContactUs" element={<ContactUs  />} />
               <Route path="/HomePage" element={<HomePage />} />
+              <Route path="/AddMembers" element={<AddMembers />} />
             </>
           )}
         </Routes>
@@ -63,58 +65,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Registration from './components/Registration';
-// import HowItWorks from './components/HowItWorks';
-// import HappyStories from './components/HappyStories';
-// import GoodPlans from './components/GoodPlans';
-// import ContactUs from './components/ContactUs';
-// import HomePage from './components/HomePage';
-// import UserProfile from './components/UserProfile';
-
-// function App() {
-//   return (
-//     <Router>
-//       {/* Routes for navigation */}
-     
-//       <Routes>
-//         <Route path="/" element={<HomePage />} />
-//         <Route path="/registration" element={<Registration />} />
-//          <Route path="/how-it-works" element={<HowItWorks />} /> 
-//         <Route path="/happy-stories" element={<HappyStories />} />
-//         <Route path="/good-plans" element={<GoodPlans />} />
-//          <Route path="/contact-us" element={<ContactUs />} /> 
-//       </Routes> 
-//       <div >
-//       {/* <HomePage/> 
-//       <Registration/>  */}
-//       <HowItWorks/>
-//       <HappyStories/>
-//       <GoodPlans/>
-//       <ContactUs/>
-//     </div>
-//     </Router>
-//   );
-// }
-
-// export default App;

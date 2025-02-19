@@ -128,7 +128,7 @@ const Sidebar = () => {
           </ListItem>
           <Collapse in={openMenus.members} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button component={Link} to="/free-members" sx={{ pl: 8, color: "white" }}>
+              <ListItem button component={Link} to="/AddMembers" sx={{ pl: 8, color: "white" }}>
                 <ListItemIcon>
                   <FiberManualRecordIcon sx={{ color: "#fff" }} />
                 </ListItemIcon>
