@@ -315,7 +315,7 @@ const Sidebar = () => {
                 </ListItemIcon>
                 <ListItemText primary="All Posts" />
               </ListItem>
-              <ListItem button component={Link} to="/castes" sx={{ pl: 8, color: "white" }}>
+              <ListItem button component={Link} to="/AllBlogCategories" sx={{ pl: 8, color: "white" }}>
                 <ListItemIcon>
                   <FiberManualRecordIcon sx={{ color: "#fff" }} />
                 </ListItemIcon>

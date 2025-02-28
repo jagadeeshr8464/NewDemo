@@ -9,6 +9,7 @@ import HappyStories from "./components/HappyStories";
 import GoodPlans from "./components/GoodPlans";
 import ContactUs from "./components/ContactUs";
 import AddMembers from "./components/AddMembers";
+import AllBlogCategories from "./components/AllBlogCategories";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
@@ -56,6 +57,7 @@ const App = () => {
               <Route path="/ContactUs" element={<ContactUs  />} />
               <Route path="/HomePage" element={<HomePage />} />
               <Route path="/AddMembers" element={<AddMembers />} />
+              <Route path="/AllBlogCategories" element={<AllBlogCategories />} />
             </>
           )}
         </Routes>

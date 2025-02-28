@@ -29,7 +29,6 @@ const styles = {
   },
 };
 
-// Styled Components (Matches UI Colors & Shapes)
 const ApprovalBadge = styled("span")({
   backgroundColor: "#d4f8d4",
   color: "#2e7d32",
