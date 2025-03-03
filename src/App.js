@@ -10,6 +10,8 @@ import GoodPlans from "./components/GoodPlans";
 import ContactUs from "./components/ContactUs";
 import AddMembers from "./components/AddMembers";
 import AllBlogCategories from "./components/AllBlogCategories";
+import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
@@ -42,10 +44,19 @@ const App = () => {
             path="/registration"
             element={<Registration setIsLoggedIn={setIsLoggedIn} />}
           />
-          <Route
+          {/* <Route
             path="/login"
             element={<Registration setIsLoggedIn={setIsLoggedIn} />}
+          /> */}
+          <Route
+            path="/login"
+            element={<Login setIsLoggedIn={setIsLoggedIn} />}
           />
+           <Route
+            path="/register"
+            element={<Register setIsLoggedIn={setIsLoggedIn} />}
+          />
+           
           
 
           {/* Private Routes */}

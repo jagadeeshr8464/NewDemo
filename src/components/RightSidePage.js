@@ -148,7 +148,7 @@ const RightSidePage = () => {
         </Box>
         <Box sx={styles.userSection}>
           <Button color="primary" component={Link} to="/HomePage">Home</Button>
-          <Button color="primary">Login</Button>
+          <Button color="primary" component={Link} to="/login">Login</Button>
           <Button color="primary" component={Link} to="/ContactUs">Contact</Button>
           <Button color="primary">About Us</Button>
           <Badge color="secondary" badgeContent={4}>

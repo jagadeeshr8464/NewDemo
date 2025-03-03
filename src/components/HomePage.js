@@ -114,7 +114,7 @@ const HomePage = () => {
         }
         // Navigate based on the selected location
         if (selectedLocation === "NorthIndia") {
-          navigate("/registration");
+          navigate("/register");
         } else if (selectedLocation === "TamilNadu") {
           navigate("/how-it-works");
         } else if (selectedLocation === "Kerala") {
