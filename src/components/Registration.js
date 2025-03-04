@@ -103,7 +103,6 @@ const Registration = () => {
       backgroundPosition: 'center',
       position: 'relative',
       
-
     },
     formContainer: {
       width: '100%',

@@ -4,11 +4,10 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaTwitter } from "
  import logo from './assets/logo.png';
  import { LuShoppingCart } from "react-icons/lu";
  import { LiaUserCircleSolid } from "react-icons/lia";
- import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
 
  const ContactUs = () => {
-   const navigate = useNavigate(); 
-
+  
   const styles = {
     container: {
       display: "flex",
@@ -25,7 +24,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaTwitter } from "
       padding: "10px 10px",
       backgroundColor: "#ffffff",
       fontWeight: "bold",
-      // boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
+      
     },
     navLinks: {
       display: "flex",

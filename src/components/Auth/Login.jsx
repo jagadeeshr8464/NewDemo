@@ -1,8 +1,9 @@
 import React from "react";
-import { FaFacebook, FaApple } from "react-icons/fa";
+import { FaFacebook, FaApple,FaUser,FaLock } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "./AuthLayout";
+import logo from '../assets/logo.png';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -41,12 +42,12 @@ const Login = () => {
     },
     formInput: {
       width: "100%",
-      padding: "10px",
+      padding: "10px 10px 10px 40px",
       fontSize: "16px",
       border: "1px solid #ddd",
       borderRadius: "5px",
       boxSizing: "border-box",
-      marginBottom: "15px",
+      //marginBottom: "15px",
     },
     formButton: {
       backgroundColor: "#007bff",
@@ -88,26 +89,51 @@ const Login = () => {
       cursor: "pointer",
       transition: "transform 0.3s ease",
     },
+    logo: {
+      width: '120px',
+      display: 'block',
+      margin: '0 auto 20px',
+    },
+    inputIcon: {
+      position: "absolute",
+      top: "50%",
+      left: "10px",
+      transform: "translateY(-50%)",
+      color: "#888",
+      fontSize: "16px",
+      zIndex: 1,
+    },
+    inputWrapper: {
+      position: "relative",
+      marginBottom: "15px",
+    },
   };
 
   return (
     <AuthLayout>
       <div style={styles.formContainer}>
+        <img src={logo} alt="Logo" style={styles.logo} />
         <h2 style={styles.formHeading}>Welcome back!</h2>
         <p style={styles.formSubHeading}>Find your perfect match</p>
         <form style={styles.form} onSubmit={(e) => handleLogin(e)}>
-          <input
-            type="text"
-            placeholder="Username"
-            required
-            style={styles.formInput}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            required
-            style={styles.formInput}
-          />
+          <div style={styles.inputWrapper}>
+            <FaUser style={styles.inputIcon} />
+            <input
+              type="text"
+              placeholder="First Name"
+              required
+              style={styles.formInput}
+            />
+          </div>
+          <div style={styles.inputWrapper}>
+            <FaLock style={styles.inputIcon} />
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              style={styles.formInput}
+            />
+          </div>
           <button type="submit" style={styles.formButton}>
             LOG IN
           </button>

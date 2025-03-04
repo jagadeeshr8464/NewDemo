@@ -2,6 +2,7 @@ import React from "react";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 import AuthLayout from "./AuthLayout";
 import { useNavigate } from "react-router-dom";
+import logo from '../assets/logo.png';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ const Register = () => {
     formContainer: {
       width: "100%",
       maxWidth: "400px",
-      padding: "20px",
+      padding: "10px",
       backgroundColor: "rgba(255, 255, 255, 0.85)",
       borderRadius: "10px",
       boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
@@ -73,10 +74,16 @@ const Register = () => {
       textDecoration: "none",
       cursor: "pointer",
     },
+    logo: {
+      width: '120px',
+      display: 'block',
+      margin: '0 auto 20px',
+    },
   };
   return (
     <AuthLayout>
       <div style={styles.formContainer}>
+        <img src={logo} alt="Logo" style={styles.logo} />
         <h2 style={styles.formHeading}>Let’s Get Started!</h2>
         <p style={styles.formSubHeading}>
           Create an account and find your perfect match

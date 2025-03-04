@@ -37,8 +37,8 @@ const AuthLayout = ({ children }) => {
       backgroundColor: "#fff",
     },
     app: {
-      width: "100%",
-      height: "100%",
+      width: "100vw",
+      height: "100vh",
       display: "flex",
       borderRadius: "10px",
       overflow: "hidden",
@@ -109,24 +109,24 @@ const AuthLayout = ({ children }) => {
       width: isNorthIndia ? "50%" : "100%", // Full width for other regions
       backgroundColor: isNorthIndia ? "rgba(255, 255, 255, 0.8)" : "#fff",
       backgroundImage: isNorthIndia ? `url(${northPic})` : `url(${selectedBg})`,
-      backgroundSize: "cover",
+      //backgroundSize: "cover",
       backgroundPosition: "center",
       position: "relative",
     },
     formContainer: {
       width: "400px",
-      padding: "30px",
-      // backgroundColor: "rgba(255, 255, 255, 0.95)",
-      // borderRadius: "10px",
-      // boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
-      // backdropFilter: "blur(10px)",
-      // textAlign: "center",
-
-      alignItems: "center",
+      marginLeft : "800px",
+      padding: "10px",
+       //backgroundColor: "rgba(255, 255, 255, 0.95)",
+       //borderRadius: "10px",
+       //boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+       //backdropFilter: "blur(10px)",
+       //textAlign: "Center",
+      alignItems: "Center",
       display: "flex",
       backgroundSize: "cover",
       backgroundPosition: "center",
-      position: "relative",
+      //position: "relative",
     },
   };
 
@@ -144,7 +144,7 @@ const AuthLayout = ({ children }) => {
               <span style={styles.navLink} onClick={() => navigate("/login")}>
                 LogIn
               </span>
-              <span style={styles.navLink} onClick={() => navigate("/contact-us")}>
+              <span style={styles.navLink} onClick={() => navigate("/ContactUs")}>
                 Contact
               </span>
             </nav>
@@ -155,7 +155,8 @@ const AuthLayout = ({ children }) => {
         <div style={styles.leftSection}>
           <div style={styles.leftOverlay}></div>
           <div style={styles.leftContent}>
-            <h1>HiAce Matrimony.</h1>
+            <h1>HiAce </h1>
+            <h1>Matrimony.</h1>
             <p>The World's No.1 Matchmaking Service</p>
           </div>
         </div>
