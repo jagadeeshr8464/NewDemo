@@ -2,9 +2,27 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import northPic from "../assets/northPic.png";
+import southindian from "../assets/southindian.png";
+import kerala_home from "../assets/kerala_home.png";
+import andhrabackgroungimage from "../assets/andhrabackgroungimage.png";
+import karnatakabackgroundimage from "../assets/karnatakabackgroundimage.png";
+
+// Map regions to background images
+const regionBackgrounds = {
+  NorthIndia: northPic,
+  TamilNadu: southindian,
+  Kerala: kerala_home,
+  Hyderabad: andhrabackgroungimage,
+  Karnataka: karnatakabackgroundimage,
+};
 
 const AuthLayout = ({ children }) => {
   const navigate = useNavigate();
+
+  // Get selected region from sessionStorage (fallback to NorthIndia)
+  const selectedRegion = sessionStorage.getItem("selectedRegion") || "NorthIndia";
+  const selectedBg = regionBackgrounds[selectedRegion] || northPic; // Default to NorthIndia
+  const isNorthIndia = selectedRegion === "NorthIndia"; // Check if the selected region is NorthIndia
 
   const styles = {
     body: {
@@ -16,7 +34,7 @@ const AuthLayout = ({ children }) => {
       justifyContent: "center",
       alignItems: "center",
       fontFamily: "Arial, sans-serif",
-      backgroundColor: "#f4f4f4",
+      backgroundColor: "#fff",
     },
     app: {
       width: "100%",
@@ -59,25 +77,11 @@ const AuthLayout = ({ children }) => {
     },
     leftSection: {
       flex: 1,
-      backgroundImage: `url(${northPic})`,
+      backgroundImage: `url(${selectedBg})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
       position: "relative",
-    },
-    leftContent: {
-      position: "absolute",
-      bottom: "50px",
-      left: "50px",
-      color: "gold",
-      zIndex: 2,
-    },
-    leftHeading: {
-      fontSize: "40px",
-      fontWeight: "bold",
-      marginBottom: "10px",
-    },
-    leftParagraph: {
-      fontSize: "18px",
+      display: isNorthIndia ? "flex" : "none", // Hide left section for other regions
     },
     leftOverlay: {
       position: "absolute",
@@ -88,13 +92,38 @@ const AuthLayout = ({ children }) => {
       backgroundColor: "rgba(0, 0, 0, 0.5)",
       zIndex: 1,
     },
+    leftContent: {
+      position: "absolute",
+      bottom: "50px",
+      left: "50px",
+      color: "#FFD700", // Gold Color
+      zIndex: 2,
+      fontSize: "24px",
+      fontWeight: "bold",
+    },
     rightSection: {
-      flex: 1,
+      flex: isNorthIndia ? 1 : 1, // If NorthIndia, it takes space
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "rgba(255, 255, 255, 0.8)",
-      backgroundImage: `url(${northPic})`,
+      width: isNorthIndia ? "50%" : "100%", // Full width for other regions
+      backgroundColor: isNorthIndia ? "rgba(255, 255, 255, 0.8)" : "#fff",
+      backgroundImage: isNorthIndia ? `url(${northPic})` : `url(${selectedBg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      position: "relative",
+    },
+    formContainer: {
+      width: "400px",
+      padding: "30px",
+      // backgroundColor: "rgba(255, 255, 255, 0.95)",
+      // borderRadius: "10px",
+      // boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+      // backdropFilter: "blur(10px)",
+      // textAlign: "center",
+
+      alignItems: "center",
+      display: "flex",
       backgroundSize: "cover",
       backgroundPosition: "center",
       position: "relative",
@@ -113,32 +142,32 @@ const AuthLayout = ({ children }) => {
                 Home
               </span>
               <span style={styles.navLink} onClick={() => navigate("/login")}>
-                Login
+                LogIn
               </span>
-              <span
-                style={styles.navLink}
-                onClick={() => navigate("/contact-us")}
-              >
+              <span style={styles.navLink} onClick={() => navigate("/contact-us")}>
                 Contact
               </span>
             </nav>
           </div>
         </div>
 
-        {/* Left Section */}
+        {/* Left Section - Only shown for NorthIndia */}
         <div style={styles.leftSection}>
           <div style={styles.leftOverlay}></div>
           <div style={styles.leftContent}>
-            <h1 style={styles.leftHeading}>HiAce</h1>
-            <h1 style={styles.leftHeading}>Matrimony.</h1>
-            <p style={styles.leftParagraph}>
-              The World's No.1 Matchmaking Service
-            </p>
+            <h1>HiAce Matrimony.</h1>
+            <p>The World's No.1 Matchmaking Service</p>
           </div>
         </div>
 
-        {/* Right Section */}
-        <div style={styles.rightSection}>{children}</div>
+        {/* Right Section - Centered Background for Other Regions */}
+        <div style={styles.rightSection}>
+          {!isNorthIndia ? (
+            <div style={styles.formContainer}>{children}</div>
+          ) : (
+            children
+          )}
+        </div>
       </div>
     </div>
   );

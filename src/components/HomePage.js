@@ -112,19 +112,24 @@ const HomePage = () => {
           alert("Please select a location before submitting!");
           return;
         }
+      
+        // Store selected region in sessionStorage
+        sessionStorage.setItem("selectedRegion", selectedLocation);
+      
         // Navigate based on the selected location
         if (selectedLocation === "NorthIndia") {
           navigate("/register");
         } else if (selectedLocation === "TamilNadu") {
-          navigate("/how-it-works");
+          navigate("/register");
         } else if (selectedLocation === "Kerala") {
-          navigate("/happy-stories");
+          navigate("/register");
         } else if (selectedLocation === "Hyderabad") {
-          navigate("/good-plans");
+          navigate("/register");
         } else if (selectedLocation === "Karnataka") {
-          navigate("/contact-us");
+          navigate("/register");
         }
       };
+      
     
     return (
         <div style={styles.container}>
