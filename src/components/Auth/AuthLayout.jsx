@@ -49,7 +49,7 @@ const AuthLayout = ({ children }) => {
       position: "absolute",
       top: "20px",
       left: "20px",
-      right: "20px",
+      
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
@@ -66,12 +66,12 @@ const AuthLayout = ({ children }) => {
     navLinks: {
       display: "flex",
       gap: "40px",
-      marginLeft: 120,
+      marginLeft: 50,
     },
     navLink: {
       textDecoration: "none",
       fontSize: "16px",
-      color: "#fff",
+      color: isNorthIndia ? "#fff" : 'blue',
       fontWeight: "bold",
       cursor: "pointer",
     },
@@ -109,7 +109,7 @@ const AuthLayout = ({ children }) => {
       width: isNorthIndia ? "50%" : "100%", // Full width for other regions
       backgroundColor: isNorthIndia ? "rgba(255, 255, 255, 0.8)" : "#fff",
       backgroundImage: isNorthIndia ? `url(${northPic})` : `url(${selectedBg})`,
-      //backgroundSize: "cover",
+      backgroundSize: "cover",
       backgroundPosition: "center",
       position: "relative",
     },
@@ -117,16 +117,41 @@ const AuthLayout = ({ children }) => {
       width: "400px",
       marginLeft : "800px",
       padding: "10px",
-       //backgroundColor: "rgba(255, 255, 255, 0.95)",
-       //borderRadius: "10px",
-       //boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
-       //backdropFilter: "blur(10px)",
-       //textAlign: "Center",
       alignItems: "Center",
       display: "flex",
       backgroundSize: "cover",
       backgroundPosition: "center",
-      //position: "relative",
+      position: "relative",
+    },
+    leftSection1: {
+      // flex: 1,
+      // position: 'absolute',
+      // display: 'flex',
+      flex: 1,
+      backgroundImage: `url(${selectedBg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      position: "relative",
+      display: isNorthIndia ? "flex" : "none", // Hide left section for other regions
+    },
+    leftOverlay1: {
+      position: "absolute",
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
+      zIndex: 1,
+    },
+    leftContent1: {
+      position: "absolute",
+      bottom: "50px",
+      left: "50px",
+      color: "#FFD700", // Gold Color
+      zIndex: 2,
+      fontSize: "24px",
+      fontWeight: "bold",
+      flex: 1
     },
   };
 
@@ -161,6 +186,16 @@ const AuthLayout = ({ children }) => {
           </div>
         </div>
 
+        { !isNorthIndia &&
+        <div style={styles.leftSection1}>
+          <div style={styles.leftOverlay1}></div>
+          <div style={styles.leftContent1}>
+            <h1>HiAce </h1>
+            <h1>Matrimony.</h1>
+            <p>The World's No.1 Matchmaking Service</p>
+          </div>
+        </div>
+} 
         {/* Right Section - Centered Background for Other Regions */}
         <div style={styles.rightSection}>
           {!isNorthIndia ? (

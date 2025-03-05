@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/FlyoutMenu/DrawerMenu";
 import HomePage from "./components/HomePage";
 import RightSidePage from "./components/RightSidePage";
-import Registration from "./components/Registration";
 import { Box } from "@mui/material";
 import HappyStories from "./components/HappyStories";
 import GoodPlans from "./components/GoodPlans";
@@ -40,14 +39,7 @@ const App = () => {
         <Routes>
           {/* Public Routes */}
            <Route path="/" element={<HomePage />} /> 
-          <Route
-            path="/registration"
-            element={<Registration setIsLoggedIn={setIsLoggedIn} />}
-          />
-          {/* <Route
-            path="/login"
-            element={<Registration setIsLoggedIn={setIsLoggedIn} />}
-          /> */}
+          
           <Route
             path="/login"
             element={<Login setIsLoggedIn={setIsLoggedIn} />}

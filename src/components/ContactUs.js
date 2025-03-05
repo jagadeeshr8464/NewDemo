@@ -304,7 +304,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaTwitter } from "
             Home
           </a>
           {/* <button style={{ ...styles.navLink, marginRight: "20px" }} onClick={() => navigate('/contact-us')}>Login</button> */}
-          <a href="/Registration" style={{ ...styles.navLink, marginRight: "20px" }}>
+          <a href="/register" style={{ ...styles.navLink, marginRight: "20px" }}>
             LogIn
           </a>
           <a href="/contact-us" style={styles.navLink}>
